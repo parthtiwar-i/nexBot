@@ -31,7 +31,9 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {msgEnd.current.scrollIntoView()}, [responseData]);
+  useEffect(() => {
+    msgEnd.current.scrollIntoView();
+  }, [responseData]);
 
   return (
     <VStack
@@ -54,12 +56,15 @@ const Home = () => {
       >
         {responseData.map((message, i) => (
           <ChatBody
-          key={i}
+            key={i}
             message={message.text}
             who={message.isBot == true ? "bot" : "user"}
           />
         ))}
-
+        <ChatBody
+          message={"hello there can you help me with something "}
+          who={'user'}
+        />
         <div ref={msgEnd}></div>
       </Box>
       <Footer
