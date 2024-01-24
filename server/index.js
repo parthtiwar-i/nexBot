@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 // Configure OPENAPI
 const openai = new OpenAI({
   organization: "org-GR5Uw9IjpikTn7LrejnZIRlO",
-  apiKey: "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",
+  apiKey: "process.env.OPENAI_API_KEY",
 });
 
 // Listerning
